@@ -1,0 +1,703 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"s",
+				"source  (variable)"
+			],
+			[
+				"la",
+				"langpath"
+			],
+			[
+				"endf",
+				"endforeach  (keyword)"
+			],
+			[
+				"impor",
+				"import_tpl"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"ass",
+				"assign"
+			],
+			[
+				"o",
+				"origin"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"defined",
+				"get_defined_vars"
+			],
+			[
+				"define",
+				"define_tpl"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"decl",
+				"declared_vars"
+			],
+			[
+				"get",
+				"get_class_vars"
+			],
+			[
+				"ob",
+				"obg"
+			],
+			[
+				"comp",
+				"compile"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"prev_t",
+				"prev_template"
+			],
+			[
+				"base_c",
+				"base_content"
+			],
+			[
+				"pre",
+				"prev_content"
+			],
+			[
+				"tema",
+				"template"
+			],
+			[
+				"prev",
+				"prev_template"
+			],
+			[
+				"new",
+				"newtitle"
+			],
+			[
+				"as",
+				"ages"
+			],
+			[
+				"current",
+				"current_content"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"ob_get",
+				"ob_get_contents"
+			],
+			[
+				"ob_ge",
+				"ob_get_clean"
+			],
+			[
+				"ob_",
+				"ob_get_clean"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"fil",
+				"file_link"
+			],
+			[
+				"ext",
+				"extension"
+			],
+			[
+				"tes",
+				"test"
+			],
+			[
+				"tpl",
+				"tplname"
+			],
+			[
+				"mk",
+				"mktime"
+			],
+			[
+				"fo",
+				"folder"
+			],
+			[
+				"f",
+				"folder_link"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "sass/test.sass",
+			"settings":
+			{
+				"buffer_size": 17,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/SASS Build/SASS.sublime-build",
+	"command_palette":
+	{
+		"height": 269.0,
+		"selected_items":
+		[
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Packe",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"inp",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Bookmarks: Toggle"
+			],
+			[
+				"packa",
+				"Package Control: Disable Package"
+			],
+			[
+				"tdh",
+				"Tidy HTML"
+			],
+			[
+				"html",
+				"Tidy HTML"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"intel",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"cssco",
+				"Sort via CSScomb"
+			],
+			[
+				"tid",
+				"Tidy HTML"
+			],
+			[
+				"ti",
+				"Tidy HTML"
+			],
+			[
+				"html ",
+				"Tidy HTML"
+			],
+			[
+				"tas",
+				"Tasks: New document"
+			],
+			[
+				"snipp",
+				"Snippet: <?php … ?>"
+			],
+			[
+				"gio",
+				"Gist: Open Gist"
+			],
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"G",
+				"Gist: Open Gist"
+			],
+			[
+				"cpg",
+				"Gist: Create Public Gist"
+			],
+			[
+				"Snippet: h",
+				"Snippet: Add the MIT license to a plain text file"
+			],
+			[
+				"pro",
+				"Project: Edit"
+			],
+			[
+				"edit ",
+				"Project: Edit"
+			],
+			[
+				"edit",
+				"Project: Edit"
+			],
+			[
+				"ftp",
+				"Fetch: Package"
+			],
+			[
+				"fe",
+				"Fetch: Manage"
+			],
+			[
+				"fet",
+				"Fetch: Package"
+			],
+			[
+				"fetm",
+				"Fetch: Manage"
+			],
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"fetc",
+				"Fetch: Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ints",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"snippet",
+				"Snippet: REQUEST['…']"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ssph",
+				"Set Syntax: PHP"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pag",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"p",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 588.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/aegea/Qom/index.php",
+		"/Applications/MAMP/htdocs/aegea/Qom/sass/style.sass",
+		"/Applications/MAMP/htdocs/aegea/Qom/sass/test.sass",
+		"/Applications/MAMP/htdocs/aegea/Qom/style.sass",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/User/SublimeOnSaveBuild.sublime-settings",
+		"/Applications/MAMP/htdocs/aegea/Qom/css/style.css",
+		"/Applications/MAMP/htdocs/aegea/Qom/qom.sublime-project",
+		"/Applications/MAMP/htdocs/aegea/Qom/sass/style.scss",
+		"/Applications/MAMP/htdocs/aegea/Qom/style.css",
+		"/Applications/MAMP/htdocs/aegea/Qom/style.scss",
+		"/Applications/MAMP/htdocs/aegea/Qom/stysle.scss",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/localtest/exmodel/exmodel.sublime-workspace",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/base.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/gallery.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/classes/controller.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/main.toppics.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/alert.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/languages/.htaccess",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/home-slideshow.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/languages/en.lang",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/sitemenu.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/index.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/classes/view.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/home-slideshow.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/welcome.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/classes/model.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/languages/fr.lang",
+		"/Users/berozzy/Desktop/follow-us.png",
+		"/Applications/MAMP/htdocs/localtest/exmodel/bootstrap/js/code.js",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/js/script.js",
+		"/Applications/MAMP/htdocs/localtest/exmodel/bootstrap/css/style.css",
+		"/Applications/MAMP/htdocs/localtest/snippets/slider.php",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/my-class.php",
+		"/Applications/MAMP/htdocs/localtest/snippets/this-week.TODO",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
+		"/Applications/MAMP/htdocs/localtest/snippets/normalize.css",
+		"/Applications/MAMP/htdocs/localtest/snippets/snippets.sublime-project",
+		"/Applications/MAMP/htdocs/localtest/snippets/script.slider.js",
+		"/Applications/MAMP/htdocs/localtest/snippets/style/test.css",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Applications/MAMP/htdocs/localtest/snippets/style.slider.css",
+		"/Applications/MAMP/htdocs/localtest/snippets/.gitattributes",
+		"/Applications/MAMP/htdocs/localtest/snippets/style.css",
+		"/Applications/MAMP/htdocs/localtest/snippets/file.js",
+		"/Applications/MAMP/htdocs/localtest/snippets/index.html",
+		"/tmp/subl stdin 2bdWaj.txt",
+		"/Applications/MAMP/htdocs/localtest/exmodel/classes/router.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/bootstrap/css/bootstrap.css",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/css/style.css",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/berozzy/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/.htaccess",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/js/.htaccess",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/css/.htaccess",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/style.css",
+		"/Applications/MAMP/htdocs/localtest/exmodel/.htaccess",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/index.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/view.guidlines",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/subfile.php",
+		"/Applications/MAMP/htdocs/localtest/exmodel/ui/welcome.htm",
+		"/Applications/MAMP/htdocs/localtest/index.php",
+		"/Users/berozzy/projects/mc/config/database.yml",
+		"/Users/berozzy/projects/mc/config/sphinx.yml",
+		"/Users/berozzy/.ssh/config"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"zen",
+			"tab",
+			"test",
+			"users",
+			"\n<",
+			"ipsum",
+			"</li>\n     <li>",
+			"test",
+			"<li>.*</li>",
+			"set",
+			"F3::set",
+			"$modificator",
+			"modificator",
+			"lang",
+			"prev_template",
+			"$current_content",
+			"theme",
+			"soda",
+			"\n				self::insert_default_vars();",
+			"self::insert_default_vars();",
+			"'{",
+			"$key",
+			"INCLUDED",
+			"side",
+			"sideb",
+			"side"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sass/test.sass",
+					"settings":
+					{
+						"buffer_size": 17,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 96.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 96.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"base.php",
+				"ui/base.php"
+			],
+			[
+				"js",
+				"bootstrap/js/code.js"
+			],
+			[
+				"css",
+				"bootstrap/css/style.css"
+			],
+			[
+				"inp",
+				"index.php"
+			],
+			[
+				"sty",
+				"bootstrap/css/style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 190.0,
+	"status_bar_visible": true
+}
