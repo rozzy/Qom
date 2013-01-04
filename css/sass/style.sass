@@ -3,6 +3,8 @@ $defEM: 1.0em
 $defPC: 100%
 $defPT: 12pt
 
+$color-blue: #3399CC
+
 @function n-un($num, $destination: em)
 	$origin: unit($num)
 	$defTYPE: $defPX
@@ -25,8 +27,8 @@ $defPT: 12pt
 	@return "gemicons/#{$size}x#{$size}/row #{$row}/#{$num}.png"
 
 @mixin gemicon-make($size, $row, $num)
-	width: $size
-	height: $size
+	width: #{$size}px
+	height: #{$size}px
 	background: left top url(gemicon($size, $row, $num)) no-repeat
 
 body
@@ -36,7 +38,12 @@ body
 	
 h1,h2,h3,h4,.hd-t
 	font-family:  'MS Serif', 'New York', sans-serif
-	
+
+a
+	color: $color-blue
+	&:hover
+		color: darken($color-blue, 30%)
+
 #main-side
 	width: 75%
 	margin: 0 auto
@@ -44,3 +51,6 @@ h1,h2,h3,h4,.hd-t
 	.maintitle
 		margin-top: 30px 
 		font-size: n-un(34px, "%")
+
+	#articles
+		margin-top: 50px 
