@@ -16,15 +16,31 @@ $defPT: 12pt
 		@return ($num / $defTYPE) * $defEM
 	@else if $destination == pt
 		@return ($num / $defTYPE) * $defPT
-	@else if $destination == pc
+	@else if $destination == pc or $destination == "%"
 		@return ($num / $defTYPE) * $defPC
 	@else if $destination == px
 		@return ($num / $defTYPE) * $defPX
 
+@function gemicon($size, $row, $num)
+	@return "gemicons/#{$size}x#{$size}/row #{$row}/#{$num}.png"
+
+@mixin gemicon-make($size, $row, $num)
+	width: $size
+	height: $size
+	background: left top url(gemicon($size, $row, $num)) no-repeat
+
 body
 	color: black
-	font-size: n-un(16px) 
+	font-size: n-un(16px, "%") 
 	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif 
 	
 h1,h2,h3,h4,.hd-t
 	font-family:  'MS Serif', 'New York', sans-serif
+	
+#main-side
+	width: 75%
+	margin: 0 auto
+	
+	.maintitle
+		margin-top: 30px 
+		font-size: n-un(34px, "%")
