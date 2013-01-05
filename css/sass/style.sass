@@ -3,6 +3,10 @@ $defEM: 1.0em
 $defPC: 100%
 $defPT: 12pt
 
+$main-font: Lucida Sans Unicode, Lucida Grande, sans-serif
+$header-font: 'MS Serif', 'New York', sans-serif
+$mono-font:  'Trebuchet MS', Helvetica, sans-serif
+
 $color-blue: #3399CC
 
 @function n-un($num, $destination: em)
@@ -31,13 +35,32 @@ $color-blue: #3399CC
 	height: #{$size}px
 	background: left top url(gemicon($size, $row, $num)) no-repeat
 
+@mixin new-underline($color)
+	color: $color
+	text-decoration: none
+	border-bottom: 1px solid lighten($color, 60%)
+	&:hover
+		color: darken($color, 10%)
+		border-bottom-color: lighten($color, 20%) 
+	
+html
+	padding: 0
+	margin: 0
+
 body
 	color: black
 	font-size: n-un(16px, "%") 
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif 
+	font-family: $main-font 
+	min-width: 200px
+	padding: 0
+	margin: 0
 	
-h1,h2,h3,h4,.hd-t
-	font-family:  'MS Serif', 'New York', sans-serif
+h1, h2, h3, h4, .hd-t
+	font-family:  $header-font
+
+input, textarea
+	outline: none
+	resize: none 
 
 a
 	color: $color-blue
@@ -45,12 +68,42 @@ a
 		color: darken($color-blue, 30%)
 
 #main-side
-	width: 75%
+	width: 70%
 	margin: 0 auto
+	@media screen and (max-width: 1000px)
+		width: 75%
+	@media screen and (max-width: 800px)
+		width: 80%
+	@media screen and (max-width: 600px)
+		width: 90%
+	@media screen and (max-width: 400px)
+		width: 100%
+		padding-left: 5%
 	
+	img.userpic
+		
+
 	.maintitle
 		margin-top: 30px 
+		margin-bottom: 10px 
 		font-size: n-un(34px, "%")
 
+	p.about
+		margin: 0
+
 	#articles
-		margin-top: 50px 
+		margin-top: 50px
+		
+		.article
+			margin-bottom: 20px
+			
+			h3.rtclttl
+				margin-bottom: 5px 
+
+				a
+					@include new-underline (black)
+			span.timeinfo
+				font: 
+					size: n-un(12px, "%")
+					family: $mono-font
+			
