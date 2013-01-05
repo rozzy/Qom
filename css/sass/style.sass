@@ -36,6 +36,7 @@ $userpic-transition: all 0.7s ease-in-out
 	width: #{$size}px
 	height: #{$size}px
 	background: left top url(gemicon($size, $row, $num)) no-repeat
+	
 
 @mixin new-underline($color)
 	color: $color
@@ -88,14 +89,18 @@ a
 		@include new-underline (adjust-hue($color-blue, 180deg))
 
 #main-side
-	width: 70%
+	width: 50%
 	min-width: 320px
 	margin: 0 auto
+	@media screen and (max-width: 1200px)
+		width: 55%
 	@media screen and (max-width: 1000px)
-		width: 75%
+		width: 60%
 	@media screen and (max-width: 800px)
-		width: 80%
+		width: 70%
 	@media screen and (max-width: 600px)
+		width: 80%
+	@media screen and (max-width: 500px)
 		width: 90%
 	@media screen and (max-width: 400px)
 		width: 100%
@@ -112,13 +117,15 @@ a
 		-o-transition: $userpic-transition
 		@media screen and (max-width: 900px)
 			float: right
-		@media screen and (max-width: 500px)
-			max-width: 48px 
-
+			max-width: 48px
+		@media screen and (max-width: 700px)
+			display: none
 	.maintitle
 		margin-top: 30px 
 		margin-bottom: 10px 
 		font-size: n-un(34px, "%")
+		@media screen and (max-width: 900px)
+			font-size: n-un(24px, "%")
 
 	p.about
 		margin: 0
