@@ -9,6 +9,8 @@ $mono-font:  'Trebuchet MS', Helvetica, sans-serif
 
 $color-blue: #3399CC
 
+$userpic-transition: all 0.7s ease-in-out
+
 @function n-un($num, $destination: em)
 	$origin: unit($num)
 	$defTYPE: $defPX
@@ -69,6 +71,7 @@ a
 
 #main-side
 	width: 70%
+	min-width: 320px
 	margin: 0 auto
 	@media screen and (max-width: 1000px)
 		width: 75%
@@ -81,7 +84,21 @@ a
 		padding-left: 5%
 	
 	img.userpic
-		
+		float: left
+		margin-left: -120px
+		margin-right: 20px
+		max-width: 96px
+		transition: $userpic-transition
+		-webkit-transition: $userpic-transition
+		-moz-transition: $userpic-transition
+		-o-transition: $userpic-transition
+		@media screen and (max-width: 800px)
+			margin-left: -110px
+			margin-right: 10px
+		@media screen and (max-width: 900px)
+			float: right
+		@media screen and (max-width: 500px)
+			max-width: 48px 
 
 	.maintitle
 		margin-top: 30px 
