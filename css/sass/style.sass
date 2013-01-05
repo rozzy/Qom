@@ -40,14 +40,14 @@ $userpic-transition: all 0.7s ease-in-out
 @mixin new-underline($color)
 	color: $color
 	text-decoration: none
-	$lightn: lightness($color)
-	lt: $lightn
-	$lightns: 30%
-	@if $lightn < 30%
-		$lightns: 70%
-	@else if $lightn >= 30%
-		$lightns: 35%
-	border-bottom: 1px solid lighten($color, $lightns)
+	$lightness: lightness($color)
+	lt: $lightness
+	$make-lighter: 35%
+	@if $lightness < 30%
+		$make-lighter: 70%
+	@else if $lightness >= 30%
+		$make-lighter: 35%
+	border-bottom: 1px solid lighten($color, $make-lighter)
 	&:hover
 		color: darken($color, 10%)
 		border-bottom-color: lighten($color, 20%) 
@@ -58,7 +58,9 @@ html
 
 body
 	color: black
-	font-size: n-un(16px, "%") 
+	font-size: n-un(16px, "%")
+	@media screen and (max-width: 400px)
+		font-size: n-un(14px, "%")
 	font-family: $main-font 
 	min-width: 200px
 	padding: 0
