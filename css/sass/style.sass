@@ -40,7 +40,14 @@ $userpic-transition: all 0.7s ease-in-out
 @mixin new-underline($color)
 	color: $color
 	text-decoration: none
-	border-bottom: 1px solid lighten($color, 60%)
+	$lightn: lightness($color)
+	lt: $lightn
+	$lightns: 30%
+	@if $lightn < 30%
+		$lightns: 70%
+	@else if $lightn >= 30%
+		$lightns: 35%
+	border-bottom: 1px solid lighten($color, $lightns)
 	&:hover
 		color: darken($color, 10%)
 		border-bottom-color: lighten($color, 20%) 
@@ -64,10 +71,15 @@ input, textarea
 	outline: none
 	resize: none 
 
-a
-	color: $color-blue
+a 	
+	
+	@include new-underline ($color-blue)
 	&:hover
-		color: darken($color-blue, 30%)
+		@include new-underline (adjust-hue($color-blue, 20deg))
+	&:visited
+		@include new-underline (adjust-hue($color-blue, 90deg))
+	&:active
+		@include new-underline (adjust-hue($color-blue, 180deg))
 
 #main-side
 	width: 70%
@@ -92,9 +104,6 @@ a
 		-webkit-transition: $userpic-transition
 		-moz-transition: $userpic-transition
 		-o-transition: $userpic-transition
-		@media screen and (max-width: 800px)
-			margin-left: -110px
-			margin-right: 10px
 		@media screen and (max-width: 900px)
 			float: right
 		@media screen and (max-width: 500px)
