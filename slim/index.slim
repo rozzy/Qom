@@ -5,6 +5,8 @@ html
 		meta charset="UTF-8"
 		title Qom
 
+		script type="text/javascript" charset="utf-8" src="js/jquery.js"
+
 		link rel="stylesheet" href="css/style.css"
 	body
 		#main-side
@@ -15,12 +17,28 @@ html
 			 
 			ul.top-links
 				li: a href="#tags" Теги
-				li: a href="#list" Всё
-
+				li: a href="#favs" Избранное
+				li: a.everything href="#list" Всё
+				li.separator
+				li
+					a.no-style href="#ff"
+						img valign="middle" src="#{@images}row 1/13.png" title="Сайт"/
+				li
+					a.no-style href="#ff"
+						img valign="middle" src="#{@images}row 4/10.png" title="Twitter"/
+				li
+					a.no-style href="#ff"
+						img valign="middle" src="#{@images}row 4/11.png" title="Facebook"/
+				li
+					a.no-style href="#ff"
+						img valign="middle" src="#{@images}row 4/9.png" title="Dribbble"/
+				li
+					a.no-style href="#ff"
+						img valign="middle" src="#{@images}row 4/8.png" title="Instagram"/
 			#articles
 				.article
-					h1.rtclttl 
-						img.img-fav src="#{@images}row 6/1.png"/
+					h1.rtclttl.favorited
+						img.img-fav src="#{@images}row 6/1.png"/ title="В избранном"
 						a href="#" Егвений Алехин «Третья штанина»
 					span.timeinfo 5 января, после полуночи
 					p.rtclmsg
