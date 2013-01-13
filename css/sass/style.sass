@@ -172,7 +172,7 @@ a
 		margin-top: 20px
 		
 		.article
-			margin-bottom: 20px
+			margin-bottom: 50px
 			
 			h1.rtclttl
 				margin-left: -2px
@@ -195,9 +195,29 @@ a
 						margin-left: 0
 				&.favorited a
 					font-size: n-un(18px, "%")
-			span.timeinfo
+			span.info
 				margin-bottom: 5px 
 				font:
 					size: n-un(12px, "%")
 					family: $mono-font
-			
+					
+				.time
+					display: inline-block
+					margin-right: 15px
+					
+				a.comments
+					font-style: italic
+					font-family: $header-font
+					display: inline-block
+					
+			ul.tags
+				list-style: none
+				margin: 0
+				padding: 0
+				li
+					display: inline-block
+					margin-right: 10px
+					font:
+						family: $mono-font
+						size: n-un(14px, "%")
+		
