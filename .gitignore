@@ -1,6 +1,5 @@
 .DS_Store
-*.sublime-project
-*.sublime-workspace
-/qom.sublime-*
-/qom.sublime-project
-/qom.sublime-workspace
+
+qom.sublime-*
+qom.sublime-project
+qom.sublime-workspace

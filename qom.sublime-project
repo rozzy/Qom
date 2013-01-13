@@ -2,10 +2,15 @@
 	"folders":
 	[
 		{
-			"path": "/Applications/MAMP/htdocs/aegea/Qom",
-
-			"folder_exclude_patterns": ["*.sass-cache"],
-			"file_exclude_patterns": ["*.sublime-workspace"]
+			"file_exclude_patterns":
+			[
+				"*.sublime-workspace"
+			],
+			"folder_exclude_patterns":
+			[
+				"*.sass-cache"
+			],
+			"path": "/Applications/MAMP/htdocs/aegea/Qom"
 		}
 	]
 }
