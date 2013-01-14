@@ -8,14 +8,20 @@
  * @version 1.0
  */
 pre {
-    background: #fafafa;
+    background: #fff;
     word-wrap: break-word;
     margin: 0px;
     padding: 0px;
     color: black;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin: 0;
 }
+
+
+@media screen and (max-width: 600px) {
+pre {
+    font-size: 12px;
+}}
 
 pre, code {
     font-family: 'Monaco', courier, monospace;
@@ -74,6 +80,9 @@ pre .preprocessor {
 
 .rainbow {
   padding: 0;
+  display: inline-block!important;
+  max-width: 100%;
+  margin: 0;
   border: none;
   max-width: 100%;
   border-spacing: 0;
@@ -84,8 +93,8 @@ pre .preprocessor {
     .rainbow .rainbow-header .rainbow-language {
       text-align: right;border: none;
       padding: 0.5em; }
-  .rainbow .rainbow-line:hover {
-    background-color: #fafafa; }
+      .rainbow .rainbow-header .rainbow-language:after {
+      }
   .rainbow .rainbow-line .rainbow-line-number {
     text-align: right;border: none;
     vertical-align: top;
@@ -96,6 +105,10 @@ pre .preprocessor {
       content: attr(data-number); border: none;}
   .rainbow .rainbow-line .rainbow-line-code {
     padding-left: 1em;
+    word-wrap:break-word;
     border: none;
-    width: 100%; }
+    }
+
+  .rainbow .rainbow-line:hover,.rainbow .rainbow-line:hover .rainbow-line-number {
+    background-color: #f4f4f4; }
 
