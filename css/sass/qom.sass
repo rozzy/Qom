@@ -84,22 +84,26 @@ pre
       +flexible-font
       vertical-align: top
       display: inline-block
-      text-align: right
       border: none
       color: lighten(black, 80%)
       vertical-align: top
-      background-color: #FFF
+      margin-left: -30px
+      margin-right: 0
+      min-width: 15px
+      background-color: #FFF  
       padding-left: .4em
-      padding-right: .4em
-      @media screen and (max-width: 600px)
-        display: none
+      padding-right: 15px
+      text-align: right
+      @media screen and (max-width: 300px)
+        margin-left: -5px
+        text-align: right
+        padding-right: 10px
       &::before
         content: attr(data-number)
         border: none
     .rainbow-line-code
       display: inline-block
       vertical-align: top
-      padding-left: 1em
       word-wrap: break-word!important
       border: none
     &:hover
