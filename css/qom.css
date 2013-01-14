@@ -1,0 +1,101 @@
+/**
+ * Qom theme
+ * 
+ * Adapted from a theme based on:
+ * http://studiostyl.es/schemes/son-of-obsidian
+ *
+ * @author Nikita Nikitin <berozzy@gmail.com>
+ * @version 1.0
+ */
+pre {
+    background: #fafafa;
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+pre, code {
+    font-family: 'Monaco', courier, monospace;
+}
+
+pre .comment {
+    color: #998;
+}
+
+pre .support {
+    color: #0086B3;
+}
+
+pre .tag, pre .tag-name {
+    color: navy;
+}
+
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+    font-weight: bold;
+}
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+    color: #333;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+    font-weight: normal;
+    color: #099;
+}
+
+pre .entity.class {
+    color: #458;
+}
+
+pre .entity.id, pre .entity.function {
+    color: #900;
+}
+
+pre .attribute, pre .variable {
+    color: teal;
+}
+
+pre .string, pre .support.value  {
+    font-weight: normal;
+    color: #d14;
+}
+
+pre .regexp {
+    color: #009926;
+}
+
+/* C# specific rule */
+pre .preprocessor {
+	color: #66747B;
+}
+
+.rainbow {
+  padding: 0;
+  border: none;
+  max-width: 100%;
+  border-spacing: 0;
+  font-size: 0.9em;}
+  .rainbow .rainbow-header {
+      border: none;
+    background-color: white; }
+    .rainbow .rainbow-header .rainbow-language {
+      text-align: right;border: none;
+      padding: 0.5em; }
+  .rainbow .rainbow-line:hover {
+    background-color: #fafafa; }
+  .rainbow .rainbow-line .rainbow-line-number {
+    text-align: right;border: none;
+    vertical-align: top;
+    background-color: white;
+    padding-left: 0.4em;
+    padding-right: 0.4em; }
+    .rainbow .rainbow-line .rainbow-line-number::before {
+      content: attr(data-number); border: none;}
+  .rainbow .rainbow-line .rainbow-line-code {
+    padding-left: 1em;
+    border: none;
+    width: 100%; }
+
