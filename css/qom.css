@@ -1,30 +1,24 @@
-/**
- * Qom theme
- * 
- * Adapted from a theme based on:
- * http://studiostyl.es/schemes/son-of-obsidian
+/* Qom theme for Rainbow syntax highlighter
+ * Rainbow: http://craig.is/making/rainbows/
+ * Rainbow on github: https://github.com/ccampbell/rainbow
  *
- * @author Nikita Nikitin <berozzy@gmail.com>
- * @version 1.0
- */
-pre {
+ * Author: Nikitin Nikita
+ * Repo url: https://github.com/rozzy/qom-theme-for-syntax
+ * Date: 14 Jan 2013 */
+
+ pre {
     background: #fff;
     word-wrap: break-word;
-    margin: 0px;
-    padding: 0px;
-    color: black;
+    color: #000;
     font-size: 14px;
+    width: 100%;
     margin: 0;
+    padding: 0;
+    font-family: Monaco,courier,monospace;
 }
 
-
-@media screen and (max-width: 600px) {
-pre {
-    font-size: 12px;
-}}
-
-pre, code {
-    font-family: 'Monaco', courier, monospace;
+code {
+    font-family: Monaco,courier,monospace;
 }
 
 pre .comment {
@@ -32,23 +26,23 @@ pre .comment {
 }
 
 pre .support {
-    color: #0086B3;
+    color: #0086b3;
 }
 
-pre .tag, pre .tag-name {
-    color: navy;
+pre .tag,pre .tag-name {
+    color: green;
 }
 
-pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
-    font-weight: bold;
+pre .keyword,pre .css-property,pre .vendor-prefix,pre .sass,pre .class,pre .id,pre .css-value,pre .entity.function,pre .storage.function {
+    font-weight: 700;
 }
 
-pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+pre .css-property,pre .css-value,pre .vendor-prefix,pre .support.namespace {
     color: #333;
 }
 
-pre .constant.numeric, pre .keyword.unit, pre .hex-color {
-    font-weight: normal;
+pre .constant.numeric,pre .keyword.unit,pre .hex-color {
+    font-weight: 400;
     color: #099;
 }
 
@@ -56,16 +50,20 @@ pre .entity.class {
     color: #458;
 }
 
-pre .entity.id, pre .entity.function {
+pre .entity.id {
     color: #900;
 }
 
-pre .attribute, pre .variable {
+pre .entity.function {
+    color: green;
+}
+
+pre .attribute,pre .variable {
     color: teal;
 }
 
-pre .string, pre .support.value  {
-    font-weight: normal;
+pre .string,pre .support.value {
+    font-weight: 400;
     color: #d14;
 }
 
@@ -73,42 +71,100 @@ pre .regexp {
     color: #009926;
 }
 
-/* C# specific rule */
 pre .preprocessor {
-	color: #66747B;
+    color: #66747b;
+}
+
+pre .operator {
+    color: grey;
+    font-weight: bold;
+}
+
+pre .function,pre .call {
+    color: green;
 }
 
 .rainbow {
-  padding: 0;
-  display: inline-block!important;
-  max-width: 100%;
-  margin: 0;
-  border: none;
-  max-width: 100%;
-  border-spacing: 0;
-  font-size: 0.9em;}
-  .rainbow .rainbow-header {
-      border: none;
-    background-color: white; }
-    .rainbow .rainbow-header .rainbow-language {
-      text-align: right;border: none;
-      padding: 0.5em; }
-      .rainbow .rainbow-header .rainbow-language:after {
-      }
-  .rainbow .rainbow-line .rainbow-line-number {
-    text-align: right;border: none;
-    vertical-align: top;
-    background-color: white;
-    padding-left: 0.4em;
-    padding-right: 0.4em; }
-    .rainbow .rainbow-line .rainbow-line-number::before {
-      content: attr(data-number); border: none;}
-  .rainbow .rainbow-line .rainbow-line-code {
-    padding-left: 1em;
-    word-wrap:break-word;
+    display: inline-block !important;
     border: none;
+    width: 100%;
+    border-spacing: 0;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .rainbow {
+        font-size: 12px;
     }
+}
 
-  .rainbow .rainbow-line:hover,.rainbow .rainbow-line:hover .rainbow-line-number {
-    background-color: #f4f4f4; }
+@media screen and (max-width: 300px) {
+    .rainbow {
+        font-size: 10px;
+    }
+}
 
+.rainbow .rainbow-header {
+    border: none;
+    background-color: #fff;
+}
+
+.rainbow .rainbow-header .rainbow-language {
+    text-align: right;
+    border: none;
+    padding: 0.5em;
+}
+
+.rainbow .rainbow-line .rainbow-line-number {
+    vertical-align: top;
+    display: inline-block;
+    text-align: right;
+    border: none;
+    color: #ccc;
+    vertical-align: top;
+    background-color: #fff;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+@media screen and (max-width: 600px) {
+    .rainbow .rainbow-line .rainbow-line-number {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .rainbow .rainbow-line .rainbow-line-number {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rainbow .rainbow-line .rainbow-line-number {
+        display: none;
+    }
+}
+
+.rainbow .rainbow-line .rainbow-line-number::before {
+    content: attr(data-number);
+    border: none;
+}
+
+.rainbow .rainbow-line .rainbow-line-code {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 1em;
+    word-wrap: break-word !important;
+    border: none;
+}
+
+.rainbow .rainbow-line:hover {
+    background-color: #f4f4f4;
+}
+
+.rainbow .rainbow-line:hover .rainbow-line-number {
+    background-color: #f4f4f4;
+    color: #000;
+}

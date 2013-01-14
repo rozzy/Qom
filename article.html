@@ -55,7 +55,7 @@ require 'sinatra'
 require 'slim'
 
 set :views, 'stuff'
-set :public_folder, 'else'
+set :public_folder, /(.[a-z]+)/?(a|b)/i
 
 $fizzy = Fizzy.new(
   'Экзистенциализм',
@@ -87,6 +87,10 @@ get '/~*/?' do |page|
   @id = "*"
   @page = page.to_i
   slim :blog
+end
+
+def test param
+  p param
 end
 
 get '/*/?' do |post|
