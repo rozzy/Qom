@@ -17,9 +17,7 @@ if (
       <? if (array_key_exists ('new-note', $content['admin-hrefs'])) { ?>
       <?=
         _A (
-          '<a href="'. $content['admin-hrefs']['new-note'] .'"><img src="'.
-          _IMGSRC ('new' .(_AT ($content['admin-hrefs']['new-note'])? '-selected' : '') .'.png').
-          '" width="16" height="16" alt="" style="position: absolute; left: -18px" /><big><b>'. _S ('ln--new-post') .'</b></big></a>'
+          '<a href="'. $content['admin-hrefs']['new-note'] .'"><b class="black">'. _S ('ln--new-post') .'</b></a>'
         )
       ?>
       <? } ?>
@@ -35,12 +33,12 @@ if (
         '>'.
         '<span id="e2-drafts">'.
         _A (
-          '<a href="'. $content['admin-hrefs']['drafts'] .'"><b>'. _S ('ln--drafts') .'</b></a>'
+          '<a href="'. $content['admin-hrefs']['drafts'] .'"><b class="black">'. _S ('ln--drafts') .'</b></a>'
         ).
         '&nbsp;'.
         '<span class="count" id="e2-drafts-count">'.
         $content['blog']['drafts-count'].
-        '</span>'.
+        '390</span>'.
         '</span>'.
         '</span>'
       ?>
