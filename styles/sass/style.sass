@@ -100,6 +100,11 @@ input, textarea
 	outline: none
 	resize: none 
 
+.rss
+	font-size: 12px
+	margin-left: 10px
+	+new-underline(#E0811B)
+
 a 	
 	@include new-underline ($color-blue)
 	
@@ -110,12 +115,12 @@ a
 	&:active
 		@include new-underline (adjust-hue($color-blue, 180deg))
 
-	&.no-style
+	&.no-style,.no-style
 		text-decoration: none
 		border: 0
 		color: none
 		background: none
-	&.black
+	&.black,.black
 		+new-underline(black)
 
 var
@@ -133,6 +138,7 @@ code
 	white-space: pre
 ul, ol
 	margin: 0
+	font-size: 100%!important
 	margin-bottom: 15px 
 	padding: 0
 	li

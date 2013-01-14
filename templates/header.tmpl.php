@@ -1,60 +1,50 @@
-<div class="top-spacer"></div>
-
 <? _X ('header-pre') ?>
-
-<div class="blog-title-and-description">
-
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
-<tr valign="baseline">
-<td>
-  <h1>
-    <?= _A ('<a href="'. $content['blog']['href']. '"><span id="e2-blog-title">'. $content['blog']['title']. '</span></a>') ?> 
-    <?
-      if (
-        array_key_exists ('admin-hrefs', $content)
-        and array_key_exists ('name-and-author', $content['admin-hrefs'])
-        and !_AT ($content['admin-hrefs']['name-and-author'] )
-      ) { 
-    ?>
-      <a href="<?= $content['admin-hrefs']['name-and-author'] ?>"><img src="<?= _IMGSRC ('edit.png') ?>" alt="Править" /></a>
-    <? } ?>
-    <a class="rss-link" style="" href="<?=@$content['blog']['rss-href']?>">РСС</a>
-  </h1>
-  <? #if ($content['frontpage?']) { ?>
-  <p><span id="e2-blog-description"><?= $content['blog']['description'] ?></span></p>
-  <? #} ?>
-  
-</td>
-<td width="50%" align="right">
-  <small>
-  <? if ($content['tags-menu']['not-empty?']) { ?> 
-    <? if (_AT ($content['hrefs']['tags'])): ?> 
-    Теги
-    <? else: ?>
-    <a href="<?= $content['hrefs']['tags'] ?>">Теги</a>
-    <? endif ?>
-  <? } ?>
-  &nbsp;
-  <? if (@$content['blog']['notes-count']) { ?>
-    <?
+	<? _T ('author-menu') ?>
+	<img class="userpic" src="http://my-art.biz/uploads/posts/2009-02/1234116129_kubizm.jpg" />
+	<h1 class="maintitle"><?= _A ('<a href="'. $content['blog']['href']. '"><span class="black" id="e2-blog-title">'. $content['blog']['title']. '</span></a>')?><sup><a class="rss" href="<?=@$content['blog']['rss-href']?>">RSS</a></sup></h1>
+	<p id="e2-blog-description" class="about"><?= $content['blog']['description'] ?></p>
+	<ul class="top-links">
+	<li>
+	    <? if (_AT ($content['hrefs']['tags'])): ?> 
+	    Теги
+	    <? else: ?>
+	    <a href="<?= $content['hrefs']['tags'] ?>">Теги</a>
+	    <? endif ?>
+	</li>
+	<li>
+		<? if (_AT ($content['favourites']['href'])): ?>
+			Избранное
+		<? else: ?>
+			<a href="<?= $content['favourites']['href']?>">Избранное</a>
+		<? endif ?>
+	</li>
+	<li>
+	  <?
       if (@$content['class'] == 'everything') {
-        echo 'всё';
+        echo 'Всё';
       } else {
         echo (
-          '<a style="color: #999" href="'.@$content['hrefs']['everything'].'?part=1&of=3">в</a>'.
-          '<a style="color: #999" href="'.@$content['hrefs']['everything'].'?part=2&of=3">с</a>'.
-          '<a style="color: #999" href="'.@$content['hrefs']['everything'].'?part=3&of=3">ё</a>'
+          '<a class="everything" href="'.@$content['hrefs']['everything'].'?part=1">Всё</a>'
         );
       }
     ?>
-  <? } ?>
-  </small>
-</td>
-</tr>
-</table>
-
-</div>
-
-<div class="clear"></div>
-
+	</li>
+	<li class="separator"></li>
+	<li>
+	  <a class="no-style" href="#ff"><img src="themes/Qom/styles/gemicons/web.png" title="Сайт" valign="middle" /></a>
+	</li>
+	<li>
+	  <a class="no-style" href="#ff"><img src="themes/Qom/styles/gemicons/twitter.png" title="Twitter" valign="middle" /></a>
+	</li>
+	<li>
+	  <a class="no-style" href="#ff"><img src="themes/Qom/styles/gemicons/facebook.png" title="Facebook" valign="middle" /></a>
+	</li>
+	<li>
+	  <a class="no-style" href="#ff"><img src="themes/Qom/styles/gemicons/dribbble.png" title="Dribbble" valign="middle" /></a>
+	</li>
+	<li>
+	  <a class="no-style" href="#ff"><img src="themes/Qom/styles/gemicons/instagram.png" title="Instagram" valign="middle" /></a>
+	</li>
+	<li class="separator"></li>
+	</ul>
 <? _X ('header-post') ?>
