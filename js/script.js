@@ -3,7 +3,7 @@
 
   $(function() {
     $('code').each(function() {
-      $(this).attr('data-language', 'html');
+      $(this).attr('data-language', $(this).attr('data-language') || 'html');
       if ($(this).parent().get(0).tagName !== 'PRE') {
         return $(this).wrap('<pre />');
       }

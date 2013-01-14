@@ -6,6 +6,7 @@
 	<? _JS ('main') ?>
 	<? #_CSS ('main') ?>
 	<? _CSS ('style') ?>
+	<? _CSS ('qom') ?>
 	<? _JS ('script') ?>
 	<? _JS ('script') ?>
 	

@@ -1,6 +1,6 @@
 <? _X ('header-pre') ?>
 	<? _T ('author-menu') ?>
-	<img class="userpic" src="http://my-art.biz/uploads/posts/2009-02/1234116129_kubizm.jpg" />
+	<? _T ('user-picture') ?>
 	<h1 class="maintitle"><?= _A ('<a href="'. $content['blog']['href']. '"><span class="black" id="e2-blog-title">'. $content['blog']['title']. '</span></a>')?><sup><a class="rss" href="<?=@$content['blog']['rss-href']?>">RSS</a></sup></h1>
 	<p id="e2-blog-description" class="about"><?= $content['blog']['description'] ?></p>
 	<ul class="top-links">
