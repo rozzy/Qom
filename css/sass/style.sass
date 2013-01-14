@@ -1,3 +1,5 @@
+@charset "utf-8"
+
 $defPX: 16px
 $defEM: 1.0em
 $defPC: 100%
@@ -10,6 +12,7 @@ $mono-font:  'Trebuchet MS', Helvetica, sans-serif
 $color-blue: #3399CC
 
 $all-transition: all 0.7s ease-in-out
+
 
 @function n-un($num, $destination: em)
 	$origin: unit($num)
@@ -115,6 +118,44 @@ a
 		background: none
 	&.black
 		+new-underline(black)
+
+var
+	font-family: $mono-font
+	font-style: normal
+	color: lighten(black, 20%)
+	background:  #fafafa
+	padding: 2px 5px
+
+blockquote
+	&:before
+		position: absolute
+		margin-left: -50px
+		margin-top: 25px
+		content: '“'
+		font:
+			family: $mono-font
+			size: 80px
+		@media screen and (max-width: 700px)
+			font-size: 60px
+			margin-top: 20px
+			margin-left: -40px
+		@media screen and (max-width: 500px)
+			font-size: 40px
+			margin-top: 10px
+			margin-left: -25px
+	padding: 0
+	margin: 0
+	p
+		margin: 0
+		padding: 0
+		font-family: $header-font
+	i, em
+		display: inline-block
+		margin-top: 10px
+		color: lighten(black, 30%)
+		font:
+			size: 14px
+			family: $mono-font
 
 #main-side
 	width: 50%
