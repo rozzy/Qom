@@ -122,8 +122,12 @@ a
 var
 	font-family: $mono-font
 	font-style: normal
-	color: lighten(black, 20%)
-	background:  #fafafa
+	color: darken(#795d36, 20%)
+	font-weight: 500
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	border-radius: 5px
+	background: lighten(#141414, 80%)
 	padding: 2px 5px
 
 blockquote
@@ -134,24 +138,38 @@ blockquote
 		content: '“'
 		font:
 			family: $mono-font
-			size: 80px
+			size: n-un(80px, "%")
 		@media screen and (max-width: 700px)
-			font-size: 60px
+			font-size: n-un(60px, "%")
 			margin-top: 20px
 			margin-left: -40px
 		@media screen and (max-width: 500px)
-			font-size: 40px
-			margin-top: 10px
-			margin-left: -25px
+			font-size: n-un(40px, "%")
+			margin-top: 15px
+			margin-left: -30px
+		@media screen and (max-width: 400px)
+			margin-left: -20px
+			margin-top: 10px 
+		@media screen and (max-width: 300px)
+			content: '‘'
+			font-size: n-un(35px, "%")
+			margin-top: 5px
+			margin-left: -10px
 	padding: 0
 	margin: 0
+	margin-bottom: 20px 
 	p
 		margin: 0
 		padding: 0
 		font-family: $header-font
+		
+		i, em
+			color: black
+			font-size: 100%
+			margin: 0
 	i, em
 		display: inline-block
-		margin-top: 10px
+		margin-top: 6px
 		color: lighten(black, 30%)
 		font:
 			size: 14px
@@ -215,6 +233,11 @@ blockquote
 
 	code
 		white-space: pre
+	ul, ol
+		li
+			font:
+				size: n-un(14px, '%')
+				family: $header-font
 	#articles
 		margin-top: 20px
 		
