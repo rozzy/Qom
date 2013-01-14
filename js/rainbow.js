@@ -18,6 +18,7 @@
  * @preserve @version 1.1.8
  * @url rainbowco.de
  */
+
 window['Rainbow'] = (function() {
 
     /**
