@@ -6,12 +6,7 @@ html
         title Qom
 
         script type="text/javascript" charset="utf-8" src="js/jquery.js"
-        script src="js/rainbow.min.js"
-        script src="js/rainbow.linecount.js"
-        script src="js/language/generic.js"
-        script src="js/language/javascript.js"
         link rel="stylesheet" href="css/style.css"
-        link href="css/github.css" rel="stylesheet" type="text/css"
     body
         #main-side
             img.userpic src="http://my-art.biz/uploads/posts/2009-02/1234116129_kubizm.jpg"/
@@ -72,21 +67,23 @@ html
                             br
                             br
                             pre
-                                code.rainbow data-language="javascript"
-                                    | var a = 'test';
-                                    br
-                                    | var b = 'test';
+                              code data-language="javascript"
+                                  | var a = 'test';
+                                  | alert(a);
+                                    
                                     
                     ul.tags
                         li: a href="#tag" экзистенциализм
                         li: a href="#tag2" АББВ
                         li: a href="#tag3" Тойота
                         li: a href="#tag4" Евгений Алехин
-
-
             footer
                 span[float="right"]
                     a href="#aegea" Эгея
                     |, 
                     a href="#qom" Qom
                 | Никитин Никита © 2013
+
+    script src="js/rainbow.min.js"
+    script src="js/language/generic.js"
+    script src="js/rainbow.linecount.js"
