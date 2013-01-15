@@ -31,13 +31,13 @@ $all-transition: all 0.7s ease-in-out
 	@else if $destination == px
 		@return ($num / $defTYPE) * $defPX
 
-@function gemicon($size, $row, $num)
-	@return "gemicons/#{$size}x#{$size}/row #{$row}/#{$num}.png"
+@function gemicon($name)
+	@return "../images/#{$name}.png"
 
-@mixin gemicon-make($size, $row, $num)
+@mixin gemicon-make($name, $size)
 	width: #{$size}px
 	height: #{$size}px
-	background: left top url(gemicon($size, $row, $num)) no-repeat
+	background: left top url(gemicon($name)) no-repeat
 	
 
 @mixin new-underline($color, $border-color: "same")
@@ -116,8 +116,8 @@ a
 		@include new-underline (adjust-hue($color-blue, 180deg))
 
 	&.no-style,.no-style
-		text-decoration: none
-		border: 0
+		text-decoration: none!important
+		border: 0!important
 		color: none
 		background: none
 	&.black,.black
@@ -213,6 +213,17 @@ blockquote
 	
 	#e2-drafts-count, .count
 		font-size: 10px!important
+
+	$admin-step: 700px
+	.vs
+		@media screen and (min-width: $admin-step)
+			display: none
+	.hs
+		@media screen and (max-width: $admin-step)
+			display: none
+	.admin-icon
+		vertical-align: top
+		margin-top: 3px
 
 #main-side
 	width: 50%
@@ -331,4 +342,115 @@ blockquote
 		font-size: n-un(14px, "%")
 		padding-top: 15px
 		border-top: 1px solid lighten(black, 80%) 
+
+.button
+	display: inline
+	display: inline-block
+	outline: none
+	padding: 5px 10px
+	background: #fff
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(232, 232, 232, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(85%, rgba(232, 232, 232, 1)), color-stop(100%, rgba(255, 255, 255, 0.33)))
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(232, 232, 232, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(232, 232, 232, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(232, 232, 232, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 )
+	/* IE6-9 */
+	background: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(232, 232, 232, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* W3C */
+	border: 1px #fff solid
+	border-radius: 4px
+	box-shadow: 0 1px 2px #777
+	text-shadow: 0 1px 0 #fff
+	font-size: 85%
+	font-weight: normal
+	font-family: "Arial"
+	cursor: hand
+	cursor: pointer
+
+.submit-box .button
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 192, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(85%, rgba(240, 240, 192, 1)), color-stop(100%, rgba(255, 255, 255, 0.33)))
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 192, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 192, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 192, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f0f0c0',GradientType=0 )
+	/* IE6-9 */
+	background: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 192, 1) 85%, rgba(255, 255, 255, 0.33) 100%)
+	/* W3C */
+	box-shadow: 0 1px 2px #876
+
+.delete-box .button
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 208, 192, 1) 85%, rgba(255, 255, 255, 0.67) 100%)
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(85%, rgba(240, 208, 192, 1)), color-stop(100%, rgba(255, 255, 255, 0.67)))
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 208, 192, 1) 85%, rgba(255, 255, 255, 0.67) 100%)
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 208, 192, 1) 85%, rgba(255, 255, 255, 0.67) 100%)
+	/* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 208, 192, 1) 85%, rgba(255, 255, 255, 0.67) 100%)
+	/* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f0d0c0',GradientType=0 )
+	/* IE6-9 */
+	background: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(240, 208, 192, 1) 85%, rgba(255, 255, 255, 0.67) 100%)
+	/* W3C */
+	box-shadow: 0 1px 2px #433
+
+.button
+	&:disabled
+		color: #a0a0a0
+		cursor: default
+	&:hover
+		box-shadow: 0 2px 4px #777
+	&:focus
+		border: 1px #ccc dashed
+	&:active:hover, &:disabled:hover
+		border-color: #fff
+		box-shadow: 0 1px 2px #777
+
+.submit-box .button
+	&:hover
+		box-shadow: 0 2px 4px #876
+	&:focus
+		border-color: #d0d060
+	&:disabled
+		color: #c0c0a0
+	&:active:hover, &:disabled:hover
+		border-color: #fff
+		box-shadow: 0 1px 2px #876
+
+.delete-box .button
+	&:hover
+		box-shadow: 0 2px 4px #433
+	&:focus
+		border-color: #e87c6c
+	&:disabled
+		color: #a0c0c0
+	&:active:hover, &:disabled:hover
+		border-color: #fff
+		box-shadow: 0 1px 2px #433
+
+.button
+	*
+		vertical-align: absmiddle
+	img
+		position: relative
+		top: -2px
+		margin: 0 .67em 0 0
+
+.submit-button
+	padding: 5px 10px!important
+	font-weight: bold
+	font-size: inherit
 		

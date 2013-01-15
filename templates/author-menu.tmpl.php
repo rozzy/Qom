@@ -17,7 +17,7 @@ if (
       <? if (array_key_exists ('new-note', $content['admin-hrefs'])) { ?>
       <?=
         _A (
-          '<a href="'. $content['admin-hrefs']['new-note'] .'"><b class="red">'. _S ('ln--new-post') .'</b></a>'
+          '<a href="'. $content['admin-hrefs']['new-note'] .'"><img src="'._IMGSRC('new.png').'" class="admin-icon no-style vs"/> <b class="red hs">'. _S ('ln--new-post') .'</b></a>'
         )
       ?>
       <? } ?>
@@ -62,35 +62,50 @@ if (
     <? if (array_key_exists ('admin-hrefs', $content)): ?>
     <span class="admin-links">
 
-    <?# if ($content['update-info']['ready?']): ?>
+    <? if ($content['update-info']['ready?']): ?>
       <?=
         _A (
-          '<a href="'. $content['admin-hrefs']['update'] .'"><b class="red">Обновления</b></a>'
+          '<a href="'. $content['admin-hrefs']['update'] .'"><img src="'._IMGSRC('update.png').'" class="admin-icon vs no-style"/></a>'
         )
-      ?><? #if ($content['update-info']['changesets-count'] != 1) {?><span class="tsp">&nbsp;</span><span class="count">12<?#= $content['update-info']['changesets-count'] ?></span><? #} ?>
-      &nbsp;
-    <?# endif ?>
+      ?>
+      <?=
+        _A (
+          '<a href="'. $content['admin-hrefs']['update'] .'"><b class="red hs">Обновления</b></a>'
+        )
+      ?><? if ($content['update-info']['changesets-count'] != 1) {?><span class="tsp">&nbsp;</span><span class="count"><?=$content['update-info']['changesets-count'] ?></span><? } ?>
+      &nbsp;&nbsp;&nbsp;
+    <? endif ?>
 
     <? if ($content['sessions']['multiple?']): ?>
       <?=
         _A (
-          '<a href="'. $content['admin-hrefs']['sessions'] .'"><b class="black">Сессии</b></a>'
+          '<a href="'. $content['admin-hrefs']['sessions'] .'"><img src="'._IMGSRC('sessions.png').'" class="admin-icon vs no-style"/></a>'
+        )
+      ?>
+      <?=
+        _A (
+          '<a href="'. $content['admin-hrefs']['sessions'] .'"><b class="black hs">Сессии</b></a>'
         )
       ?><span class="tsp">&nbsp;</span><span class="count"><?= $content['sessions']['count'] ?></span>
-      &nbsp;
+      &nbsp;&nbsp;&nbsp;
     <? endif ?>
     
     <? if (array_key_exists ('settings', $content['admin-hrefs'])): ?>
       <?=
         _A (
-          '<a href="'. $content['admin-hrefs']['settings'] .'"><b class="black">Настройки</b></a>'
+          '<a href="'. $content['admin-hrefs']['settings'] .'"><img src="'._IMGSRC('settings.png').'" class="admin-icon vs no-style"/></a>'
         )
       ?>
-      &nbsp;
+      <?=
+        _A (
+          '<a href="'. $content['admin-hrefs']['settings'] .'"><b class="black hs">Настройки</b></a>'
+        )
+      ?>
+      &nbsp;&nbsp;
     <? endif ?>
 
     <? if (array_key_exists ('logout', $content['admin-hrefs'])): ?>
-      <form style="display: inline-block" action="<?= $content['admin-hrefs']['logout'] ?>" method="post"><button type="submit" class="button submit-button"><?= _S ('fb--sign-out') ?></button></form>
+      <form style="display: inline-block;margin-right: 10px; margin-left: 5px" action="<?= $content['admin-hrefs']['logout'] ?>" method="post"><input class="admin-icon vs" style="margin-right: 10px" type="image" src="<?=_IMGSRC('exit.png')?>"/><button type="submit" class="button submit-button hs"><?= _S ('fb--sign-out') ?></button></form>
     <? endif ?>
     
     </span>
