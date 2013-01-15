@@ -1,8 +1,14 @@
 <? _X ('header-pre') ?>
 	<? _T ('author-menu') ?>
+	
+	
 	<? _T ('user-picture') ?>
 	<h1 class="maintitle"><?= _A ('<a href="'. $content['blog']['href']. '"><span class="black" id="e2-blog-title">'. $content['blog']['title']. '</span></a>')?><sup><a class="rss" href="<?=@$content['blog']['rss-href']?>">RSS</a></sup></h1>
 	<p id="e2-blog-description" class="about"><?= $content['blog']['description'] ?></p>
+	<pre><? #print_r($content) ?></pre>
+	<? if (in_array($content['current-href'], $content['admin-hrefs'])): ?>
+		<br/><br/>
+	<? else: ?>
 	<ul class="top-links">
 	<li>
 	    <? if (_AT ($content['hrefs']['tags'])): ?> 
@@ -47,4 +53,5 @@
 	</li>
 	<li class="separator"></li>-->
 	</ul>
+	<? endif ?>
 <? _X ('header-post') ?>
