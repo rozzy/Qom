@@ -4,7 +4,8 @@
 		<? _T ('copyrights') ?><br/>
 		<? if (!$content['sign-in']['done?'] and !$content['sign-in']['necessary?']) { ?>
 		<a id="e2-visual-login" href="<?= $content['hrefs']['sign-in'] ?>"><img src="<?= _IMGSRC ('login.png') ?>"/></a>
-		<? } ?><? _T ('engine-info') ?>
+		<? } ?>
+		<div class="engine-info"><? _T ('engine-info') ?></div>
 	</div>
 	
 	<div class="searchform">
