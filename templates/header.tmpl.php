@@ -29,7 +29,7 @@
       }
     ?>
 	</li>
-	<li class="separator"></li>
+	<!--<li class="separator"></li>
 	<li>
 	  <a class="no-style" href="#ff"><img src="themes/Qom/styles/gemicons/web.png" title="Сайт" valign="middle" /></a>
 	</li>
@@ -45,6 +45,6 @@
 	<li>
 	  <a class="no-style" href="#ff"><img src="themes/Qom/styles/gemicons/instagram.png" title="Instagram" valign="middle" /></a>
 	</li>
-	<li class="separator"></li>
+	<li class="separator"></li>-->
 	</ul>
 <? _X ('header-post') ?>
