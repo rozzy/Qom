@@ -22,6 +22,7 @@ if (
       ?>
       <? } ?>
 
+      <span class="sepma"></span>
       <? if (array_key_exists ('drafts', $content['admin-hrefs'])) { ?>
       &nbsp;&nbsp;&nbsp;
       <?=
@@ -43,10 +44,9 @@ if (
         '</span>'
       ?>
       <? } ?>
-      
       <?#= $drafts_item ?>
       
-    </span>
+    </span><span class="sepma"></span>
     <? if (array_key_exists ('new-comments', $content)) { ?>
       &nbsp;&nbsp;&nbsp;
       <a href="<?= @$content['new-comments']['href'] ?>"><b class="blue">Комментарии</b></a>
@@ -54,15 +54,16 @@ if (
     <? } ?>
     
   </div>
-  
+  <span class="sepma"></span>
   <div class="admin-menu-service icons">
   
-    <img src="<?= _IMGSRC ('fadeout.png') ?>" alt="" style="position: absolute; left: -40px; top: 0;" width="40" height="100%" />
+    <img class="mm" src="<?= _IMGSRC ('fadeout.png') ?>" alt="" style="position: absolute; left: -40px; top: 0;" width="40" height="100%" />
     &nbsp;&nbsp;&nbsp;
     <? if (array_key_exists ('admin-hrefs', $content)): ?>
     <span class="admin-links">
 
     <? if ($content['update-info']['ready?']): ?>
+      <span class="mm">
       <?=
         _A (
           '<a href="'. $content['admin-hrefs']['update'] .'"><img src="'._IMGSRC('update.png').'" class="admin-icon vs no-style"/></a>'
@@ -74,9 +75,10 @@ if (
         )
       ?><? if ($content['update-info']['changesets-count'] != 1) {?><span class="tsp">&nbsp;</span><span class="count"><?=$content['update-info']['changesets-count'] ?></span><? } ?>
       &nbsp;&nbsp;&nbsp;
-    <? endif ?>
-
+      </span>
+      <? endif ?>
     <? if ($content['sessions']['multiple?']): ?>
+    <span class="mm">
       <?=
         _A (
           '<a href="'. $content['admin-hrefs']['sessions'] .'"><img src="'._IMGSRC('sessions.png').'" class="admin-icon vs no-style"/></a>'
@@ -88,8 +90,9 @@ if (
         )
       ?><span class="tsp">&nbsp;</span><span class="count"><?= $content['sessions']['count'] ?></span>
       &nbsp;&nbsp;&nbsp;
+      </span>
     <? endif ?>
-    
+    <span class="sepma"></span>
     <? if (array_key_exists ('settings', $content['admin-hrefs'])): ?>
       <?=
         _A (
@@ -103,7 +106,7 @@ if (
       ?>
       &nbsp;&nbsp;
     <? endif ?>
-
+<span class="sepma"></span>
     <? if (array_key_exists ('logout', $content['admin-hrefs'])): ?>
       <form style="display: inline-block;margin-right: 10px; margin-left: 5px" action="<?= $content['admin-hrefs']['logout'] ?>" method="post"><input class="admin-icon vs" style="margin-right: 10px" type="image" src="<?=_IMGSRC('exit.png')?>"/><button type="submit" class="button submit-button hs"><?= _S ('fb--sign-out') ?></button></form>
     <? endif ?>

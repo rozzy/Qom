@@ -1,5 +1,8 @@
 $ ->
     $('a img').each ->
+        if $(this).parent().find('*').length == 1
+            $(this).addClass 'no-style'
+
         if $(this).hasClass 'no-style'
             $(this).parent().addClass 'no-style'
     $('code').each ->

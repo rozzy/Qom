@@ -3,6 +3,9 @@
 
   $(function() {
     $('a img').each(function() {
+      if ($(this).parent().find('*').length === 1) {
+        $(this).addClass('no-style');
+      }
       if ($(this).hasClass('no-style')) {
         return $(this).parent().addClass('no-style');
       }
