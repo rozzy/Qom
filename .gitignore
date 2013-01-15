@@ -1,6 +1,6 @@
 .DS_Store
 README.md
-
+.sass-cache
 qom.sublime-*
 qom.sublime-project
 qom.sublime-workspace
