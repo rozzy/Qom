@@ -1,1 +1,1 @@
-<?=$content['engine']['about']?>
+<a href="http://blogengine.ru/">нухџ</a>, <a href="http://nikitin.cc/e2-qom">Qom</a>

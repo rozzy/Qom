@@ -3,7 +3,7 @@
 	
 	
 	<? _T ('user-picture') ?>
-	<h1 class="maintitle"><?= _A ('<a href="'. $content['blog']['href']. '"><span class="black" id="e2-blog-title">'. $content['blog']['title']. '</span></a>')?><sup><a class="rss" href="<?=@$content['blog']['rss-href']?>">ÐÑÑ</a></sup></h1>
+	<h1 class="maintitle"><span class="e2-smart-title"><?= _A ('<a href="'. $content['blog']['href']. '"><span class="black" id="e2-blog-title">'. $content['blog']['title']. '</span></a>')?></span><sup><a class="rss" href="<?=@$content['blog']['rss-href']?>">ÐÑÑ</a></sup></h1>
 	<p id="e2-blog-description" class="about"><?= $content['blog']['description'] ?></p>
 	<pre><? #print_r($content) ?></pre>
 	<? if (in_array($content['current-href'], $content['admin-hrefs'])): ?>

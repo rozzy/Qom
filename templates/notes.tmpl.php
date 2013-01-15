@@ -3,7 +3,7 @@
 <? foreach ($content['notes'] as $note): ?>
 <? _X ('note-pre') ?>
 <article>
-	<h3 class="article-name"><?= _A ('<a href="'. $note['href']. '">'. $note['title']. '</a>') ?></h3>
+	<h3 class="article-name e2-smart-title"><?= _A ('<a href="'. $note['href']. '">'. $note['title']. '</a>') ?></h3>
 	<div class="article-menu">
 		<? if (array_key_exists ('favourite-toggle-href', $note)): ?>
 		<a href="<?= $note['favourite-toggle-href'] ?>" class="e2-favourite-toggle">

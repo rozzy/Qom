@@ -1,4 +1,5 @@
-&copy;&nbsp; <span id="e2-blog-author"><?= @$content['blog']['author'] ?></span>, <?=$content['blog']['years-range']?> 
+<div class="copyrights icons">
+&copy;&nbsp;<span id="e2-blog-author"><?= @$content['blog']['author'] ?></span>, <?=$content['blog']['years-range']?>
 <?
   if (
     array_key_exists ('admin-hrefs', $content)
@@ -6,5 +7,6 @@
     and !_AT ($content['admin-hrefs']['name-and-author'] )
   ) { 
 ?>
-  <a href="<?= $content['admin-hrefs']['name-and-author'] ?>"><img src="<?= _IMGSRC ('edit-small.png') ?>" alt="Править" title="Править" /></a>
+  <a href="<?= $content['admin-hrefs']['name-and-author'] ?>"><img width="10" style="margin-top:5px" valign="top" src="<?= _IMGSRC ('edit-small.png') ?>" alt="Править" title="Править" /></a>
 <? } ?>
+</div>
