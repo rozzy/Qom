@@ -214,6 +214,7 @@ blockquote
 	-webkit-box-shadow: $box-shadow
 	box-shadow: $box-shadow
 	-moz-box-shadow: $box-shadow
+	
 	//Разкоментите, чтобы получить крутой эффект 
 	//&.riding
 	//	margin-top: -50px
@@ -311,6 +312,22 @@ blockquote
 			family: $mono-font
 			size: n-un(14px, "%")
 		margin-bottom: -15px
+	.pages
+		padding: 5px 10px
+		font:
+			size: n-un(14px, "%")
+			family: $mono-font
+		display: inline-block
+		margin-left: -40px
+		a
+			+new-underline(black)
+		.keyboard-shortcut
+			font-weight: bold
+			margin-right: 5px
+		&.up
+			margin-bottom: 25px 
+		&.down
+			margin-top: 25px 
 	#articles
 		margin-top: 20px
 		
