@@ -199,6 +199,7 @@ blockquote
 			family: $mono-font
 
 .admin-menu
+	+transition(all 0.5s)
 	width: 100%
 	min-width: 100px
 	position: fixed!important
@@ -207,12 +208,16 @@ blockquote
 	font-size: n-un(12px, "%")!important
 	overflow: visible !important
 	left: 0
-	background: #fff
-	$box-shadow:  0px 0px 15px 10px white
+	$bg: white
+	background: $bg
+	$box-shadow:  0px 0px 15px 10px $bg
 	-webkit-box-shadow: $box-shadow
 	box-shadow: $box-shadow
 	-moz-box-shadow: $box-shadow
-	
+	//Разкоментите, чтобы получить крутой эффект 
+	//&.riding
+	//	 margin-top: -50px
+
 	#e2-drafts-count, .count
 		font-size: 10px!important
 
@@ -287,7 +292,25 @@ blockquote
 
 			&.separator
 				width: 3%
-
+	.tag-heading
+		margin: 0
+		margin-top: 30px
+		
+		.tags, .sub-h
+			margin: 0
+			margin-top: -15px
+			font:
+				family: $mono-font
+				size: n-un(14px, "%")
+			p
+				margin: 0
+		.sub-h
+			margin-bottom: 20px 
+	.sup-heading
+		font:
+			family: $mono-font
+			size: n-un(14px, "%")
+		margin-bottom: -15px
 	#articles
 		margin-top: 20px
 		

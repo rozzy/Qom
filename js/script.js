@@ -2,6 +2,13 @@
 (function() {
 
   $(function() {
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > $('.admin-menu').height()) {
+        return $('.admin-menu').addClass('riding');
+      } else {
+        return $('.admin-menu').removeClass('riding');
+      }
+    });
     $('a img').each(function() {
       if ($(this).parent().find('*').length === 1) {
         $(this).addClass('no-style');

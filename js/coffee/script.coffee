@@ -1,4 +1,9 @@
 $ ->
+    $(window).scroll ->
+        if $(window).scrollTop() > $('.admin-menu').height()
+            $('.admin-menu').addClass 'riding'
+        else
+            $('.admin-menu').removeClass 'riding'
     $('a img').each ->
         if $(this).parent().find('*').length == 1
             $(this).addClass 'no-style'

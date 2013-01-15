@@ -19,13 +19,14 @@
 	<? endif ?></h2>
 	
 	<? endif ?>
+	
+	<? _T_FOR ('tag') ?>
+	
 	<? if (array_key_exists ('search-related-tag', $content)) { ?> 
-	<p class="tags"><small>см. также тег <a href="<?=$content['search-related-tag']['href']?>"><?=$content['search-related-tag']['name']?></a>.</small></p>
+	<p class="tags"><small>Похожий тег: <a href="<?=$content['search-related-tag']['href']?>"><?=$content['search-related-tag']['name']?></a></small></p>
 	<? } ?>
 </section>
 <? endif ?>
-
-<? _T_FOR ('tag') ?>
 <? _T_FOR ('error-404-description') ?>
 
 <? _T_FOR ('year-months') ?>
