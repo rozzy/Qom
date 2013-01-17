@@ -11,7 +11,9 @@ $ ->
         if $(this).hasClass 'no-style'
             $(this).parent().addClass 'no-style'
     $('code').each ->
-        $(this).attr 'data-language', ($(this).attr('data-language') || 'html')
+        lang = $(this).attr('data-language') || 'html'
+        $(this).html $(this).html().replace /<br\/?>/g, '\r\n' if lang != 'html'?
+        $(this).attr 'data-language', lang
         if $(this).parent().get(0).tagName != 'PRE'
             $(this).wrap '<pre />'
     $.getScript "themes/Qom/js/rainbow.min.js"

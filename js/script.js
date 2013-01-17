@@ -18,7 +18,12 @@
       }
     });
     $('code').each(function() {
-      $(this).attr('data-language', $(this).attr('data-language') || 'html');
+      var lang;
+      lang = $(this).attr('data-language') || 'html';
+      if (lang !== ('html' != null)) {
+        $(this).html($(this).html().replace(/<br\/?>/g, '\r\n'));
+      }
+      $(this).attr('data-language', lang);
       if ($(this).parent().get(0).tagName !== 'PRE') {
         return $(this).wrap('<pre />');
       }

@@ -88,9 +88,16 @@ pre
       border: none
       padding: .5em
   .rainbow-line
+    white-space: nowrap
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
     .rainbow-line-number
       +flexible-font
       vertical-align: top
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      border-radius: 5px
       display: inline-block
       border: none
       color: lighten(black, 80%)
@@ -114,6 +121,9 @@ pre
       vertical-align: top
       word-wrap: break-word!important
       border: none
+      max-width: 100%
+      overflow: hidden
+      white-space: normal
     &:hover
       background-color: #f4f4f4
       .rainbow-line-number
