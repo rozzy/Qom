@@ -112,6 +112,8 @@ a
 		@include new-underline (adjust-hue($color-blue, 20deg))
 	&:visited
 		@include new-underline (adjust-hue($color-blue, 90deg))
+	&.ageless:visited
+		@include new-underline($color-blue)
 	&:active
 		@include new-underline (adjust-hue($color-blue, 180deg))
 

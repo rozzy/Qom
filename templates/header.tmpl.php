@@ -14,14 +14,14 @@
 	    <? if (_AT ($content['hrefs']['tags'])): ?> 
 	    Теги
 	    <? else: ?>
-	    <a href="<?= $content['hrefs']['tags'] ?>">Теги</a>
+	    <a class="ageless" href="<?= $content['hrefs']['tags'] ?>">Теги</a>
 	    <? endif ?>
 	</li>
 	<li>
 		<? if (_AT ($content['favourites']['href'])): ?>
 			Избранное
 		<? else: ?>
-			<a href="<?= $content['favourites']['href']?>">Избранное</a>
+			<a class="ageless" href="<?= $content['favourites']['href']?>">Избранное</a>
 		<? endif ?>
 	</li>
 	<li>
