@@ -385,35 +385,24 @@ blockquote
 						family: $mono-font
 						size: n-un(14px, "%")
 	
-	.searchform
-		margin-top: 10px
-		margin-bottom: 25px
 	footer
-		margin-bottom: 50px
+		margin: 50px 0
 		font-size: n-un(12px, "%")
 		width: 100%
-		
-		.copyrights, .searchform
-			display: inline-block
-			white-space: nowrap
-			vertical-align: top
 		.copyrights
-			width: 49%
+			white-space: nowrap
+			width: 50%
+			.engine-info
+				margin-top: -20px!important
 		.searchform
-			margin-top: 0
-			right: 0
-			position: relative
-			width: 49%
-			form
-				background: red
-				position: relative 
-				float:right
-				max-width: 100%
-			.flr
-				right: 0
-				position: absolute
+			white-space: nowrap
+			margin-bottom: 15px
+			@media screen and (min-width: 700px)
+				float: right
+				margin-bottom: 0 
 			input
-				max-width: 100%
+				width: 95%
+				padding: 0 5px
 				border: 1px solid #555555
 				-webkit-border-radius: 10px
 				-moz-border-radius: 10px
