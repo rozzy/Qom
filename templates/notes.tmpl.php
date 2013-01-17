@@ -1,88 +1,77 @@
 <? _JS ('scaleimage') ?>
 
+<div id="articles">
 <? foreach ($content['notes'] as $note): ?>
 <? _X ('note-pre') ?>
-<article>
-	<h3 class="article-name e2-smart-title"><?= _A ('<a href="'. $note['href']. '">'. $note['title']. '</a>') ?></h3>
-	<div class="article-menu">
-		<? if (array_key_exists ('favourite-toggle-href', $note)): ?>
-		<a href="<?= $note['favourite-toggle-href'] ?>" class="e2-favourite-toggle">
-		<img src="<?= _IMGSRC ('star-'. ($note['favourite?']? 'set' : 'unset') .'.png') ?>" alt="Избранное" title="Избранное"
-		/></a>
+<div class="article">
+	<h1 class="rtclttl <?=($note['favourite?']?'favorited':'')?> e2-smart-title">
+    		<? if (array_key_exists ('favourite-toggle-href', $note)): ?>
+				<a href="<?= $note['favourite-toggle-href'] ?>" class="e2-favourite-toggle">
+				<img src="<?= _IMGSRC ('star-'. ($note['favourite?']? 'set' : 'unset') .'.png') ?>" class="img-fav" title="Избранное"
+				/></a>
+			<? else: ?>
+				<? if (@$note['favourite?']) { ?><img class="img-fav" src="<?= _IMGSRC ('star-set.png') ?>" class="img-fav" title="В избранном" /><? } ?> 
+			<? endif ?>
+    	<?= _A ('<a href="'. $note['href']. '">'. $note['title']. '</a>') ?>
+    	<? if (@$note['published?']): ?>
 		
-		<? else: ?>
-		<? if (@$note['favourite?']) { ?><img src="<?= _IMGSRC ('star.gif') ?>" alt="Избранное" /><? } ?> 
-		<? endif ?>
-		
-		<? if (@$note['published?']): ?>
-		
-		<? if (array_key_exists ('edit-href', $note)): ?>
-		<a href="<?= $note['edit-href'] ?>"><img src="<?= _IMGSRC ('edit.png') ?>" alt="Править" title="Править" /></a>
-		<? endif ?>
-		
-		<? if (array_key_exists ('delete-href', $note)): ?>
-		<a href="<?= $note['delete-href'] ?>"><img src="<?= _IMGSRC ('remove.png') ?>" alt="Удалить" title="Удалить" /></a>
-		<? endif ?>
+			<? if (array_key_exists ('edit-href', $note)): ?>
+			<a href="<?= $note['edit-href'] ?>"><img src="<?= _IMGSRC ('edit.png') ?>" title="Редактировать" /></a>
+			<? endif ?>
+			
+			<? if (array_key_exists ('delete-href', $note)): ?>
+			<a href="<?= $note['delete-href'] ?>"><img src="<?= _IMGSRC ('remove.png') ?>" title="Удалить" /></a>
+			<? endif ?>
 		
 		<? endif ?>
-	</div>
-	<div class="article-date" title="<?=(@$note['published?'] ? _DT ('j {month-g} Y, H:i, {zone}', @$note['time']) : 'Черновик создан:'._DT ('j {month-g} Y, H:i, {zone}', @$note['time']).', изменён: '._DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified']))?>">
-		<? if (@$note['published?']) { ?>
-			<?= _AGO ($note['time']) ?>
-		<? } else { ?>
-			<?=_DT ('j {month-g} Y, H:i', @$note['time'])?>…
-		<? } ?>
-	</div>
-	<p class="article-message">
+	</h1>
+	<span class="info">
+		<span class="time" title="<?=(@$note['published?'] ? _DT ('j {month-g} Y, H:i, {zone}', @$note['time']) : 'Создано:'._DT ('j {month-g} Y, H:i, {zone}', @$note['time']).', изменено: '._DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified']))?>">
+			<? if (@$note['published?']) { ?>
+				<?= _AGO ($note['time']) ?>
+			<? } else { ?>
+				<?=_DT ('j {month-g} Y, H:i', @$note['time'])?>вЂ¦
+			<? } ?>
+		</span>
+		<? if ($note['comments-link?'] and $note['comments-count']): ?>
+		<a class="comments" href="<?= $note['href'] ?>"><?= _NUM ($note['comments-count'] .' комментари(й,я,ев)') ?></a>
+		<? endif ?>
+	</span>
+	<p class="rtclmsg">
 		<div class="text <?= $note['published?']? 'published' : 'draft' ?> <?= $note['visible?']? 'visible' : 'hidden' ?>">
 		<?=@$note['text']?>
 		</div>
 	</p>
 	
 	<? if (array_key_exists ('tags', $note)): ?>
-	<div class="article-tags">
+	<ul class="tags">
 		<?
 		$tags = array ();
 		foreach ($note['tags'] as $tag) {
 		  if ($tag['current?']) {
-		    $tags[] = '<span class="e2-marked">'. $tag['name'] .'</span>';
+		    $tags[] = '<li class="e2-marked">'. $tag['name'] .'</li>';
 		  } else {
-		    $tags[] = '<a href="'. $tag['href'] .'">'. $tag['name'] .'</a>';
+		    $tags[] = '<li><a href="'. $tag['href'] .'">'. $tag['name'] .'</a></li>';
 		  }
 		}
 		echo implode (' &nbsp; ', $tags)
 		
 		?>
-	</div>
+	</ul>
 	<? endif; ?>
-	
-	<? if ($note['comments-link?']): ?>
-	<div class="article-comments">
-	<? if ($note['comments-count']) { ?>
-	<a href="<?= $note['href'] ?>"><?= _NUM ($note['comments-count'] .' комментари(й,я,ев)') ?></a><? if ($note['new-comments-count'] == 1 and $note['comments-count'] == 1) { ?>
-	, новый
-	<? } elseif ($note['new-comments-count'] == $note['comments-count']) { ?>
-	, новые
-	<? } elseif ($note['new-comments-count']) { ?>
-	<span class="admin-links">, включая <a href="<?=$note['href']?>#new"><?= _NUM ($note['new-comments-count'] .' новы(й,х,х)') ?></a></span>
-	<? } ?>
-	<? } else { ?>
-		<a href="<?= $note['href'] ?>">Комментариев нет</a>
-	<? } ?>
-	</div>
-	<? endif ?>
 	
 	<? if (!@$note['published?']): ?>
 	<div class="toolbar">
 	  <? if (array_key_exists ('edit-href', $note)) { ?>
-	    <a href="<?= @$note['edit-href'] ?>"><button type="button" class="button">
-	      <img src="<?= _IMGSRC ('edit.png') ?>" alt="" width="16" height="16" />Править
+	    <a class="no-style" href="<?= @$note['edit-href'] ?>"><button type="button" class="button">
+	      <img src="<?= _IMGSRC ('edit.png') ?>" valign="middle" alt="" width="16" height="16" />Редактировать
 	    </button></a>
 	  <? } ?>
 	  <div class="toolbar-end"></div>
 	</div>
 	<? endif ?>
 	
-</article>
+</div>
 <? _X ('note-post') ?>
 <? endforeach ?>
+</div>

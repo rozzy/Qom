@@ -34,11 +34,9 @@
 
 <? if (@$content['pages']['timeline?']) _T ('pages-later') ?>
 
-<section class="mainsection">
 
 <? _T ('content') ?>
 
-</section>
 
 <? if (@$content['pages']['timeline?']) _T ('pages-earlier') ?>
 <? _T ('footer') ?>

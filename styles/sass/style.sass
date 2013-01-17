@@ -327,7 +327,7 @@ blockquote
 			font-weight: bold
 			margin-right: 5px
 		&.up
-			margin-bottom: 25px 
+			margin-bottom: -25px 
 		&.down
 			margin-top: 25px 
 	#articles
@@ -345,8 +345,8 @@ blockquote
 					@include new-underline (black)
 				
 				img.img-fav
-					margin-left: -40px
-					margin-right: 25px  
+					margin-left: -30px
+					margin-right: 10px  
 					@media screen and (max-width: 900px)
 						margin-left: -25px
 						margin-right: 10px
@@ -384,6 +384,45 @@ blockquote
 					font:
 						family: $mono-font
 						size: n-un(14px, "%")
+					&.e2-marked 
+						.w
+							position: relative
+							padding: .375em 0
+							white-space: nowrap
+						.l
+							position: absolute
+							top: 0
+							width: 8px
+							z-index: 1004
+							height: 100%
+
+						.r
+							position: absolute
+							top: 0
+							width: 8px
+							z-index: 1004
+							height: 100%
+
+						.l
+							left: -8px
+							background: right center no-repeat
+							background-image: url('../images/hgl-left.png?1299055076')
+					
+						.l
+							left: -8px
+							background: right center no-repeat
+							background-image: url('../images/hgl-left.png?1299055076')
+						.r
+							right: -8px
+							background: left center no-repeat
+							background-image: url('../images/hgl-right.png?1299055065')
+						.c
+							white-space: nowrap
+							position: relative
+							padding: .375em 0
+							z-index: 1005
+							background: center center repeat-x
+							background-image: url('../images/hgl-bg.png?1299055092')
 	
 	footer
 		margin: 50px 0
@@ -402,7 +441,7 @@ blockquote
 				margin-bottom: 0 
 			input
 				width: 95%
-				padding: 0 5px
+				padding: 2px 5px
 				border: 1px solid #555555
 				-webkit-border-radius: 10px
 				-moz-border-radius: 10px
