@@ -6,31 +6,33 @@
 	<h1 class="maintitle"><span class="e2-smart-title"><?= _A ('<a href="'. $content['blog']['href']. '"><span class="black" id="e2-blog-title">'. $content['blog']['title']. '</span></a>')?></span><sup><a class="rss" href="<?=@$content['blog']['rss-href']?>">РСС</a></sup></h1>
 	<p id="e2-blog-description" class="about"><?= $content['blog']['description'] ?></p>
 	<pre><? #print_r($content) ?></pre>
-	<? if (in_array($content['current-href'], $content['admin-hrefs'])): ?>
+	<? if (in_array($content['current-href'], $content['admin-hrefs']) or $content['form-note']): ?>
 		<br/><br/>
 	<? else: ?>
 	<ul class="top-links">
 	<li>
-	    <? if (_AT ($content['hrefs']['tags'])): ?> 
+	    <? if (_AT ($content['hrefs']['tags']) or $content['hrefs']['tags'] == substr($content['current-href'], 0, strlen($content['hrefs']['tags']))): ?> 
 	    Теги
 	    <? else: ?>
 	    <a class="ageless" href="<?= $content['hrefs']['tags'] ?>">Теги</a>
 	    <? endif ?>
 	</li>
+	<?if(array_key_exists ('each', $content['favourites'])):?>
 	<li>
 		<? if (_AT ($content['favourites']['href'])): ?>
 			Избранное
 		<? else: ?>
-			<a class="ageless" href="<?= $content['favourites']['href']?>">Избранное</a>
+			<a class="ageless" href="<?=$content['favourites']['href']?>">Избранное</a>
 		<? endif ?>
 	</li>
+	<? endif ?>
 	<li>
 	  <?
       if (@$content['class'] == 'everything') {
         echo 'Всё';
       } else {
         echo (
-          '<a class="everything" href="'.@$content['hrefs']['everything'].'?part=1">Всё</a>'
+          '<a class="everything" href="'.@$content['hrefs']['everything'].'">Всё</a>'
         );
       }
     ?>
