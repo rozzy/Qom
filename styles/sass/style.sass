@@ -88,6 +88,8 @@ body
 	
 h1, h2, h3, h4, h5, h6 .hd-t
 	font-family:  $header-font
+	margin: 0
+	padding: 0
 
 h1
 	line-height: 40px
@@ -95,6 +97,28 @@ h1
 		line-height: 30px 
 	@media screen and (max-width: 300px)
 		line-height: 25px 
+
+.main-header-text
+	font-family: $mono-font
+
+p.small
+	font-size: n-un(14px, "%")
+	font-family: $mono-font	
+
+.lined-header
+	position: relative
+	overflow: hidden
+	font:
+		family: $mono-font
+		size: 24px
+		weight: normal
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		border-top: 1px solid #4e4e4e
+		margin-top: .6em
+		margin-left: .4em
 
 input, textarea
 	outline: none

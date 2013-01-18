@@ -10,13 +10,13 @@
 	<? endif ?>
 		
 	<? if (array_key_exists ('heading', $content)): ?>
-	<h2><?= $content['heading'] ?>
+	<h1 class="main-header-text"><?= $content['heading'] ?>
 	<? if (array_key_exists ('related-edit-href', $content)): ?>
 	<a href="<?= $content['related-edit-href'] ?>"><img src="<?= _IMGSRC ('edit.png') ?>" align="bottom" alt="<?= $content['related-edit-title'] ?>" title="<?= $content['related-edit-title'] ?>" /></a>
 	<? endif ?>
 	<? if (array_key_exists ('related-rss-href', $content)): ?>
 	<sup><a class="rss" href="<?=$content['related-rss-href']?>">ÐÑÑ</a></sup>
-	<? endif ?></h2>
+	<? endif ?></h1>
 	
 	<? endif ?>
 	
