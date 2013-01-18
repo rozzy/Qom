@@ -70,7 +70,6 @@
   </label><br />
 </div>
 
-
 <div class="form-control">
   <div class="label"><label>Комментарии</label></div>
   <div class="form-subcontrol-master">
