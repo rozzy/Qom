@@ -108,9 +108,10 @@ p.small
 .lined-header
 	position: relative
 	overflow: hidden
+	margin-top: 20px
 	font:
 		family: $mono-font
-		size: 24px
+		size: n-un(18px, "%")
 		weight: normal
 	&:after
 		content: ''
@@ -122,7 +123,104 @@ p.small
 
 input, textarea
 	outline: none
-	resize: none 
+	resize: none
+	font-family: $mono-font
+	font-size: n-un(14px, "%")
+	margin: 0
+
+.form
+	width: 100%
+	clear: left
+
+.form-login td
+	padding: .33em 0
+
+.form-part
+	width: 100%
+	margin: 0 0 1.75em 0
+
+.form-control
+	width: 100%
+	margin: 0 0 1em 0
+	.input-label
+		margin-top: .2em
+	input.text, textarea
+		margin-bottom: .33em
+	input.big
+		font-size: 145%
+		margin-bottom: .23em
+	.disabled
+		color: #999
+
+.form-subcontrol
+	width: 100%
+	margin: 0 0 .33em 0
+
+.form-subcontrol-master
+	margin: 0 0 0 0
+
+.form-subcontrol-slave
+	margin: 0 0 0 2.67em
+
+.form-control
+	.full-width
+		width: 100%
+	.width-4
+		width: 80%
+	.width-3
+		width: 60%
+	.width-2
+		width: 40%
+	.width-1
+		width: 20%
+	.icon
+		position: relative
+		left: -0.33em
+		width: 0
+	img
+		position: absolute
+		right: 0
+		top: .75em
+
+.form-control-sublabel
+	width: 75%
+	font-size: 85%
+	color: #404040
+
+.humble-form
+	.form
+		margin-left: 20%
+		width: 60%
+		clear: none
+	.form-control
+		.label
+			margin-left: -33.33%
+			width: 30%
+		.width-4
+			width: 100%
+		.width-3, .width-2
+			width: 66.67%
+		.width-1
+			width: 33.33%
+
+.submit-box, .delete-box
+	background: #f0f0c0
+	margin: 0.75em 0 1.5em -10%
+	padding: .75em 1em 1.5em 10%
+	border-radius: 12px
+	-moz-border-radius: 12px
+	-webkit-border-radius: 12px
+
+.submit-box p
+	font-size: 85%
+	color: #665
+
+.delete-box
+	background: #e05030
+	color: #fff
+
+.submit-box *, .delete-box *
+	vertical-align: baseline
 
 .rss
 	font-size: 12px
