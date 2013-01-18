@@ -54,6 +54,8 @@ $all-transition: all 0.7s ease-in-out
 	@if $border-color == "same"
 		$border-bottom-color: lighten($color, $make-lighter)
 	border-bottom: 1px solid $border-bottom-color
+	&.dashed
+		border-bottom-style: dashed 
 	&:hover
 		color: darken($color, 10%)
 		border-bottom-color: darken($border-bottom-color, 20%) 
